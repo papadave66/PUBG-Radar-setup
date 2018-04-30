@@ -13,13 +13,14 @@ echo "Radar PC IP (this machine) (192.168.??.??)"
 read radar_ip
 
 echo ""
-echo "interface name"
-ls /sys/class/net
+echo "interface name .please manually check ifconfig(1) for help"
+#ls /sys/class/net
 read interface
 
 echo ""
-echo "ram to use (e.g. 4g or 3g)"
-free -h
+echo "ram to use (e.g. 4g or 3g) please enter."
+#free -h
+#MacOS doesn't have free so...
 read ram
 
 cat >run.sh <<EOF

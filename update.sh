@@ -35,9 +35,9 @@ do
     esac
 done
 
-cores=$(nproc)
-
-mvn -T "$cores"C clean verify install
+#cores=$(nproc)
+#some system cannot use nproc for check cores. such as MacOS
+mvn -T 2C clean verify install
 
 cd ..
 
